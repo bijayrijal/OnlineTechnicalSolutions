@@ -1,0 +1,17 @@
+<%-- 
+    Document   : carpenterindex
+    Created on : May 23, 2016, 2:10:26 PM
+    Author     : Narayan
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hello Carpenter</h1>
+    </body>
+</html>

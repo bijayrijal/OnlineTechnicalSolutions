@@ -7,14 +7,12 @@ package com.nccs.onlinetechnicalsolutions.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
- * @author Bijay
+ * @author Narayan
  */
 @Controller
 @RequestMapping(value="/")
@@ -23,15 +21,7 @@ public class DefaultController {
     @RequestMapping(method = RequestMethod.GET)
     
     public String index(Model model){
-        model.addAttribute("name","omline technical solutions");
         return "index";
-    }
-    @RequestMapping(value="/detail/{id}", method=RequestMethod.GET)
-    @ResponseBody
-    public String detail(@PathVariable("id")int id){
-        
-        return "your variable is " +id;  
-        
     }
     
 }
