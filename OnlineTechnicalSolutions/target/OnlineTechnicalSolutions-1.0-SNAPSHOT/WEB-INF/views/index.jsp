@@ -89,7 +89,7 @@ function resizeText() {
         <ul class="toggle">
           <li><a href="#top_content">Home</a></li>
           <li><a href="#service">Services</a></li>
-          <li><a href="#work_outer">Technician</a></li>
+          <li><a href="${SITE_URL}/technician/carpenter">Technician</a></li>
          <!-- <li><a href="#Portfolio">Portfolio</a></li>-->
           <li><a href="#client_outer">Clients</a></li>
         
@@ -100,7 +100,7 @@ function resizeText() {
         <ul class="">
           <li><a href="#top_content">Home</a></li>
           <li><a href="#service">Services</a></li>
-          <li><a href="#work_outer">Technician</a></li>
+          <li><a href="${SITE_URL}/technician/carpenter">Technician</a></li>
         <!--  <li><a href="#Portfolio">Portfolio</a></li>-->
           <li><a href="#client_outer">Clients</a></li>
           <li><a href="#contact">Contact</a></li>

@@ -24,13 +24,13 @@
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <form accept-charset="UTF-8" role="form" class="form-signin">
+                               <form accept-charset="UTF-8" role="form" class="form-signin" action="${SITE_URL}/admin/verify" method="post">
                                     <fieldset>
                                         <label class="panel-login">
                                             <div class="login_result"></div>
                                         </label>
-                                        <input class="form-control" placeholder="Username" id="username" type="text">
-                                        <input class="form-control" placeholder="Password" id="password" type="password">
+                                        <input class="form-control" placeholder="Username" id="username" type="text" name="user_name" required="required">
+                                        <input class="form-control" placeholder="Password" id="password" type="password" name="pasword" required="required">
                                         <br></br>
                                         <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login »">
                                     </fieldset>
