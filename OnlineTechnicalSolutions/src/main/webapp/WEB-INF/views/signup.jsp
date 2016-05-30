@@ -4,7 +4,7 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
 <script>
 //<!-- Latest compiled and minified JavaScript -->
     < script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity = "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin = "anonymous" ></script>
@@ -40,15 +40,18 @@
                 <input type="email" name="email" value="" class="form-control input-lg" placeholder="Your Email" />
                 <input type="text" name="profession" value="" class="form-control input-lg" placeholder="Your Profession" />
                 <input type="text" name="contact" value="" class="form-control input-lg" placeholder="Contact Number" />
-                Choose Your Location:<input type="text" />
+
+                <input type="text" id="autocomplete" class="form-control input-lg" placeholder="Choose your location" />
+
+
+
                 <p>
-                <div id="googleMap" style="width:500px;height:380px;" class="form-control input-lg"></div>
+                <div id="map" style="height:380px;" class="form-control input-lg"></div>
 
-            </p>
-                <br />
+                </p>
 
 
-                <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">Create my account</button>
+
             </form>          
         </div>
     </div>
@@ -56,18 +59,39 @@
 
 
 <script>
-    function initialize() {
-        
-        
-        
-        var mapProp = {
-            center: new google.maps.LatLng(27.520451, 85.306091),
-            zoom: 5,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
+    var mapOptions = {
+        center: new google.maps.LatLng(37.7831, -122.4039),
+        zoom: 12,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    var acOptions = {
+        types: ['establishment']
+    };
+    var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'));
+    autocomplete.bindTo('bounds', map);
+    var infoWindow = new google.maps.InfoWindow();
+    var marker = new google.maps.Marker({
+        map: map
+    });
+    google.maps.event.addListener(autocomplete,'place_changed',function(){
+       infoWindow.close();
+       var place=autocomplete.getPlace();
+       if(place.geometry.viewport){
+            map.fitBounds(place.geometry.viewport);
+            
+       }else{
+           map.setCenter(place.geometry.location);
+           map.setZoom(17);
+       }
+       marker.setPosition(place.geometry.location);
+       infoWindow.setContent('<dic><strong>'+place.name+'</strong><br>');
+       infoWindow.open(map,marker);
+       google.maps.event.addListener(marker,'click',function(e){
+          infoWindow.open(map,marker); 
+       });
+    });
+   
 </script>
 
 
@@ -93,4 +117,4 @@
 
 
 
-</script>
+</script> 

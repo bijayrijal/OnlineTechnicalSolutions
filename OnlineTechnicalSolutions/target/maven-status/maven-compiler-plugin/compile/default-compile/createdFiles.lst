@@ -1,14 +1,5 @@
-com\nccs\onlinetechnicalsolutions\controller\technician\TechnicianController.class
-com\nccs\onlinetechnicalsolutions\DAO\Impl\CarpenterDAOImpl.class
-com\nccs\onlinetechnicalsolutions\entity\Plumber.class
-com\nccs\onlinetechnicalsolutions\DAO\Impl\ElectricianDAOImpl.class
-com\nccs\onlinetechnicalsolutions\DAO\PlumberDAO.class
-com\nccs\onlinetechnicalsolutions\entity\Electrician.class
-com\nccs\onlinetechnicalsolutions\entity\Signup.class
-com\nccs\onlinetechnicalsolutions\controller\DefaultController.class
-com\nccs\onlinetechnicalsolutions\entity\Carpenter.class
-com\nccs\onlinetechnicalsolutions\DAO\ElectricianDAO.class
 com\nccs\onlinetechnicalsolutions\DAO\GenericDAO.class
-com\nccs\onlinetechnicalsolutions\DAO\CarpenterDAO.class
-com\nccs\onlinetechnicalsolutions\DAO\Impl\PlumberDAOImpl.class
+com\nccs\onlinetechnicalsolutions\entity\Signup.class
+com\nccs\onlinetechnicalsolutions\controller\technician\TechnicianController.class
+com\nccs\onlinetechnicalsolutions\controller\DefaultController.class
 com\nccs\onlinetechnicalsolutions\controller\admin\AdminController.class
