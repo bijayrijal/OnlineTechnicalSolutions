@@ -1,5 +1,6 @@
 D:\project\OnlineTechnicalSolutions\OnlineTechnicalSolutions\src\main\java\com\nccs\onlinetechnicalsolutions\controller\admin\AdminController.java
-D:\project\OnlineTechnicalSolutions\OnlineTechnicalSolutions\src\main\java\com\nccs\onlinetechnicalsolutions\entity\Signup.java
+D:\project\OnlineTechnicalSolutions\OnlineTechnicalSolutions\src\main\java\com\nccs\onlinetechnicalsolutions\entity\Technician.java
 D:\project\OnlineTechnicalSolutions\OnlineTechnicalSolutions\src\main\java\com\nccs\onlinetechnicalsolutions\controller\DefaultController.java
-D:\project\OnlineTechnicalSolutions\OnlineTechnicalSolutions\src\main\java\com\nccs\onlinetechnicalsolutions\DAO\GenericDAO.java
+D:\project\OnlineTechnicalSolutions\OnlineTechnicalSolutions\src\main\java\com\nccs\onlinetechnicalsolutions\DAO\TechnicianDAO.java
+D:\project\OnlineTechnicalSolutions\OnlineTechnicalSolutions\src\main\java\com\nccs\onlinetechnicalsolutions\DAO\Impl\TechnicianDAOImpl.java
 D:\project\OnlineTechnicalSolutions\OnlineTechnicalSolutions\src\main\java\com\nccs\onlinetechnicalsolutions\controller\technician\TechnicianController.java

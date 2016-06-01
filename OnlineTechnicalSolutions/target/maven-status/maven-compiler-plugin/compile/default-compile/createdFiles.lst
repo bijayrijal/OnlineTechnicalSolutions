@@ -1,5 +1,3 @@
-com\nccs\onlinetechnicalsolutions\DAO\GenericDAO.class
-com\nccs\onlinetechnicalsolutions\entity\Signup.class
 com\nccs\onlinetechnicalsolutions\controller\technician\TechnicianController.class
 com\nccs\onlinetechnicalsolutions\controller\DefaultController.class
 com\nccs\onlinetechnicalsolutions\controller\admin\AdminController.class

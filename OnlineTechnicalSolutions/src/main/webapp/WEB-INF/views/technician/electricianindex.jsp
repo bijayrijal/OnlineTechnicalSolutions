@@ -114,7 +114,7 @@ function resizeText() {
 -->
 
 <section class="main-section" id="client_outer"><!--main-section client-part-start-->
-  <h2>Electricians</h2>
+    <h2>Electricians</h2>
   <div style="margin-left: 1.5cm">
   <div class="pull-left">
       
@@ -124,39 +124,31 @@ function resizeText() {
       <li><a href="${SITE_URL}/technician/plumber">Plumber</a></li>
       <li><a href="${SITE_URL}/technician/beautician">Beautician</a></li>
   </div>
-
+  
+      
   <div class="client_area ">
       
+      <c:forEach var="e" items="${electricians}">
       
     <div class="client_section animated  fadeInUp wow">
       <div class="client_profile">
         <div class="client_profile_pic"><img src="${SITE_URL}/assets/img/client-pic1.jpg" alt=""></div>
-        <h3>Hari Lal Karki</h3>
+        <h3>${e.firstName} ${e.lastName}</h3>
 <!--        <span>Lawless Inc</span>--> </div>
        
      
       <div class="quote_section">
           
         <div class="quote_arrow"></div>
-        <p><li>Name: Hari lal Karki</li><li>Address: Balaju Nayabazzar</li><li>Phone:01432567</li><li>Status: Active</li> </p>
+        <p><li>Name:${e.firstName}</li><li>Address:${e.address}</li><li>Phone:${e.contactNumber}</li><li>Status:${e.status}</li> </p>
      
       </div>
          
       <div class="clear"></div>
     
           </div>
-      <div class="client_section animated  fadeInUp wow">
-      <div class="client_profile">
-        <div class="client_profile_pic"><img src="${SITE_URL}/assets/img/client-pic1.jpg" alt=""></div>
-        <h3>Saul Goodman</h3>
-        <span>Lawless Inc</span> </div>
-      <div class="quote_section">
-        <div class="quote_arrow"></div>
-        <p><li>Name: Hari lal Karki</li><li>Address: Balaju Nayabazzar</li><li>Phone:01432567</li><li>Status: Active</li> </p>
-     
-      </div>
-      <div class="clear"></div>
-    </div>
+      </c:forEach>
+
       </div>
       
   </div>

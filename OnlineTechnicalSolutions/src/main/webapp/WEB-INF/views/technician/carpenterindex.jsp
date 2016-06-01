@@ -124,39 +124,31 @@ function resizeText() {
       <li><a href="${SITE_URL}/technician/plumber">Plumber</a></li>
       <li><a href="${SITE_URL}/technician/beautician">Beautician</a></li>
   </div>
-
+  
+      
   <div class="client_area ">
       
+      <c:forEach var="c" items="${carpenters}">
       
     <div class="client_section animated  fadeInUp wow">
       <div class="client_profile">
         <div class="client_profile_pic"><img src="${SITE_URL}/assets/img/client-pic1.jpg" alt=""></div>
-        <h3>Hari Lal Karki</h3>
+        <h3>${c.firstName} ${c.lastName}</h3>
 <!--        <span>Lawless Inc</span>--> </div>
        
      
       <div class="quote_section">
           
         <div class="quote_arrow"></div>
-        <p><li>Name: Hari lal Karki</li><li>Address: Balaju Nayabazzar</li><li>Phone:01432567</li><li>Status: Active</li> </p>
+        <p><li>Name:${c.firstName}</li><li>Address:${c.address}</li><li>Phone:${c.contactNumber}</li><li>Status:${c.status}</li> </p>
      
       </div>
          
       <div class="clear"></div>
     
           </div>
-      <div class="client_section animated  fadeInUp wow">
-      <div class="client_profile">
-        <div class="client_profile_pic"><img src="${SITE_URL}/assets/img/client-pic1.jpg" alt=""></div>
-        <h3>Saul Goodman</h3>
-        <span>Lawless Inc</span> </div>
-      <div class="quote_section">
-        <div class="quote_arrow"></div>
-        <p><li>Name: Hari lal Karki</li><li>Address: Balaju Nayabazzar</li><li>Phone:01432567</li><li>Status: Active</li> </p>
-     
-      </div>
-      <div class="clear"></div>
-    </div>
+      </c:forEach>
+
       </div>
       
   </div>

@@ -5,18 +5,21 @@
  */
 package com.nccs.onlinetechnicalsolutions.DAO;
 
+import com.nccs.onlinetechnicalsolutions.entity.Technician;
 import java.util.List;
 
 /**
  *
  * @author Narayan
  */
-public interface GenericDAO<T> {
+public interface TechnicianDAO {
     
-    int insert(T t);
-    int update(T t);
-    T getById(int id);
-    List<T> getAll();
-    int delete(int id);
+    void insert(Technician t);
+    void update(Technician t);
+    Technician getByUsernameAndPassword(String username,String password);
+    List<Technician> getAll();
+    List<Technician> getByProfession(String profession);
+    
+    void delete(int id);
     
 }
