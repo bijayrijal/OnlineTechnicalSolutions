@@ -19,6 +19,7 @@ public interface TechnicianDAO {
     Technician getByUsernameAndPassword(String username,String password);
     List<Technician> getAll();
     List<Technician> getByProfession(String profession);
+    Technician getById(int id);
     
     void delete(int id);
     

@@ -11,6 +11,7 @@
 <c:set  var="SITE_URL" value="${pageContext.request.contextPath}"/>
 
 <script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
+<script src="${SITE_URL}/assets/js/jQuery.min.js" type="text/javascript"></script>
  <link href="${SITE_URL}/assets/css/parallax.css" rel="stylesheet" type="text/css"/>
  <script src="${SITE_URL}/assets/js/parallax.js" type="text/javascript"></script>
         <body>
@@ -29,10 +30,11 @@
                                         <label class="panel-login">
                                             <div class="login_result"></div>
                                         </label>
-                                        <input class="form-control" placeholder="Username" id="username" type="text" name="user_name" required="required">
-                                        <input class="form-control" placeholder="Password" id="password" type="password" name="pasword" required="required">
+                                        <input class="form-control" placeholder="Username" id="username" type="text" name="username" required="required">
+                                        <input class="form-control" placeholder="Password" id="password" type="password" name="password" required="required">
+                                        <div id="error"/>
                                         <br></br>
-                                        <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login »">
+                                        <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login »" onclick="submit()">
                                     </fieldset>
                                 </form>
                             </div>
@@ -41,4 +43,10 @@
                 </div>
             </div>
         </body>
-            </div>
+          
+        
+        <script>
+            function submit(){
+            $("#error").val(${error});
+        }
+        </script>

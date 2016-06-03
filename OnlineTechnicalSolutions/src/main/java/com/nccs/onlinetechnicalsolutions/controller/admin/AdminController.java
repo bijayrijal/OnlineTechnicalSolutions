@@ -7,8 +7,6 @@ package com.nccs.onlinetechnicalsolutions.controller.admin;
 
 import com.nccs.onlinetechnicalsolutions.DAO.TechnicianDAO;
 import com.nccs.onlinetechnicalsolutions.entity.Technician;
-import java.util.List;
-import javax.ws.rs.FormParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,8 +27,11 @@ public class AdminController {
     TechnicianDAO technicianDAO;
 
     @RequestMapping(method = RequestMethod.GET, value = "/login")
-    public String login() {
+    public String login(@RequestParam(value = "error", required = false)String error,Model model) {
 
+        if(error!=null){
+           model.addAttribute("error","Wrong Username and password");
+        }
         return "login";
     }
 
@@ -40,27 +41,20 @@ public class AdminController {
     }
 
     @RequestMapping(value = "/verify", method = RequestMethod.POST)
-    public String checkUser(@RequestParam("user_name") String username, @RequestParam("pasword") String password, Model model) {
+    public String checkUser(@RequestParam("username") String username, @RequestParam("password") String password, Model model) {
 
-        int flag = 0;
-        List<Technician> techList = technicianDAO.getAll();
-
-        for (Technician t : techList) {
-
-            if (t.getUsername() == username && t.getPassword() == password) {
-                flag = 1;
-            } else {
-                flag = 0;
-            }
-
-        }
-        if (flag == 1) {
+        
+        Technician t=technicianDAO.getByUsernameAndPassword(username, password);
+        if(t==null){
+          
+            return "redirect:/admin/login";
+        }else{
+         
+            model.addAttribute("technician", t);
             return "userprofile";
-        } else {
-
-            return "login";
+            
         }
-
+      
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)

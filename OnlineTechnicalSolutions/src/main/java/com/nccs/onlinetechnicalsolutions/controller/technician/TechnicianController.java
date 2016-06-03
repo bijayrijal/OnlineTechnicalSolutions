@@ -9,6 +9,7 @@ import com.nccs.onlinetechnicalsolutions.DAO.TechnicianDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -22,6 +23,8 @@ public class TechnicianController {
 
     @Autowired
     TechnicianDAO technicianDAO;
+    
+    
 
     @RequestMapping(method = RequestMethod.GET, value = "/carpenter")
     public String carpenterList(Model model) {
@@ -43,5 +46,17 @@ public class TechnicianController {
         model.addAttribute("plumbers", technicianDAO.getByProfession("Plumber"));
         return "technician/plumberindex";
     }
+    
+    @RequestMapping(method = RequestMethod.GET,value = "/edit/{id}")
+    
+    public String edit(@PathVariable("id") int id,Model model){
+        
+        model.addAttribute("tech", technicianDAO.getById(id));
+        return "technician/edittechnician";
+        
+    }
+    
+    
+    
 
 }

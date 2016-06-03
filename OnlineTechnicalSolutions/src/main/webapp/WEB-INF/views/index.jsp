@@ -129,7 +129,7 @@ function resizeText() {
     <div class="input-group">
       <input type="text" class="form-control" placeholder="Search for...">
       <span class="input-group-btn">
-          <a href=""><button class="btn btn-default" type="button" name="searchText">Search</button></a>
+          <a href="${SITE_URL}/technician/carpenter"><button class="btn btn-default" type="button" name="searchText">Search</button></a>
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
@@ -293,14 +293,14 @@ function resizeText() {
 
 
 
-
-<div class="c-logo-part"><!--c-logo-part-start-->
+<!--
+<div class="c-logo-part">c-logo-part-start
   <div class="container">
     <ul class="delay-06s animated  bounce wow">
      
     </ul>
   </div>
-</div>
+</div>-->
 
 
 
@@ -323,18 +323,18 @@ function resizeText() {
           <div class="col-lg-4">
             <div class="contact_block">
               <div class="contact_block_icon rollIn animated wow"><span><i class="fa-home"></i></span></div>
-              <span> 308 Negra Arroyo Lane, <br>
-              Albuquerque, NM, 87104 </span> </div>
+              <span>Online technical Solution home <br>
+             </span> </div>
           </div>
           <div class="col-lg-4">
             <div class="contact_block">
               <div class="contact_block_icon icon2 rollIn animated wow"><span><i class="fa-phone"></i></span></div>
-              <span> 1-800-BOO-YAHH </span> </div>
+              <span>+9779845508198 </span> </div>
           </div>
           <div class="col-lg-4">
             <div class="contact_block">
               <div class="contact_block_icon icon3 rollIn animated wow"><span><i class="fa-pencil"></i></span></div>
-              <span> <a href="mailto:hello@butterfly.com"> hello@butterfly.com</a> </span> </div>
+              <span> <a href="mailto:hello@butterfly.com"> onlinetechsolution@gmail.com</a> </span> </div>
           </div>
         </div>
       </div>
@@ -342,8 +342,8 @@ function resizeText() {
         <div class="col-lg-6 wow fadeInLeft">
           <div class="contact-info-box address clearfix">
             <h3>Don’t be shy. Say hello!</h3>
-            <p>Accusantium quam, aliquam ultricies eget tempor id, aliquam eget nibh et. Maecen aliquam, risus at semper. Accusantium quam, aliquam ultricies eget tempor id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
-            <p>Accusantium quam, aliquam ultricies eget tempor id, aliquam eget nibh et. Maecen aliquampor id.</p>
+            <p></p>
+            <p></p>
           </div>
           <ul class="social-link">
             <li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa-twitter"></i></a></li>

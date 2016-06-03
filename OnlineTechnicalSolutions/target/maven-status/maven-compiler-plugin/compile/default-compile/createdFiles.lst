@@ -1,3 +1,6 @@
 com\nccs\onlinetechnicalsolutions\controller\technician\TechnicianController.class
 com\nccs\onlinetechnicalsolutions\controller\DefaultController.class
 com\nccs\onlinetechnicalsolutions\controller\admin\AdminController.class
+com\nccs\onlinetechnicalsolutions\DAO\Impl\TechnicianDAOImpl.class
+com\nccs\onlinetechnicalsolutions\entity\Technician.class
+com\nccs\onlinetechnicalsolutions\DAO\TechnicianDAO.class
